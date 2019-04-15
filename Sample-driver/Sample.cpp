@@ -48,7 +48,7 @@ typedef struct _NEX_OUTPUT_STATE
 {
 	WORD								LeftMotorSpeed;
 	WORD								RightMotorSpeed;
-	bool								UseLed;
+	BYTE								LEDBrightness;
 	BYTE								LEDRed;
 	BYTE								LEDGreen;
 	BYTE								LEDBlue;
@@ -119,10 +119,10 @@ DLLEXPORT DWORD __stdcall NEXInputSetState(__in DWORD dwUserIndex, __in NEX_OUTP
 
 	//RGB-LED
 	/*
-	if (pOutputState->UseLed)
-		pOutputState->LEDRed		//0 .. 255
-		pOutputState->LEDGreen		//0 .. 255
-		pOutputState->LEDBlue		//0 .. 255
+	pOutputState->LEDBrightness	//0 .. 255
+	pOutputState->LEDRed		//0 .. 255
+	pOutputState->LEDGreen		//0 .. 255
+	pOutputState->LEDBlue		//0 .. 255
 	*/
 
 	if (dwUserIndex == 0)
