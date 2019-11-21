@@ -1,4 +1,4 @@
-﻿#include <atlstr.h> 
+﻿#include <windows.h> 
 
 #define DLLEXPORT extern "C" __declspec(dllexport)
 
